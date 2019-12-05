@@ -1,4 +1,4 @@
-# 战略决策委员会投票合约
+# Smart Contract for Steering Committee Voting
 
 ## 合约地址
 - `vote`:  0xDBAeC4165A6cff07901C41D3561EEFdCFbc20CB6
