@@ -73,7 +73,7 @@ function cancelProposal(uint256 _proposalId)
 
 ### getBasicInfo  
 获取议题基本信息 
-```
+```solidity
 function getBasicInfo(uint256 _proposalId) 
         public 
         view
@@ -103,7 +103,7 @@ function getBasicInfo(uint256 _proposalId)
 
 ### getCondition  
 获取议题限制信息  
-```
+```solidity
 function getCondition(uint256 _proposalId)
         public
         view
@@ -120,7 +120,7 @@ function getCondition(uint256 _proposalId)
 
 ### accessProposal  
 检查目标地址是否有权限投票  
-```
+```solidity
 function accessProposal(address _target, address _master)  
       public
       view
@@ -134,7 +134,7 @@ function accessProposal(address _target, address _master)
  
 ### getVoterOptions  
 获取已投票选项值
-```
+```solidity
 function getVoterOptions(uint256 _proposalId, address _voter)
         public
         view
@@ -148,7 +148,7 @@ function getVoterOptions(uint256 _proposalId, address _voter)
 
 ### getTally  
 返回投票结果  
-```
+```solidity
 function getTally(uint256 _proposalId)
         public
         view
@@ -161,7 +161,7 @@ function getTally(uint256 _proposalId)
 
 ### status  
 返回当前议题状态
-```
+```solidity
 function status(uint256 _proposalId)
         public
         view
@@ -175,7 +175,7 @@ function status(uint256 _proposalId)
 ## Utils 
 
 ### 检查是否ThorNode
-```
+```solidity
 function isToken(
         address _target
         ) public 
@@ -188,7 +188,7 @@ function isToken(
 True or False   
 
 ### 检查是否AM节点
-```
+```solidity
 function isMaster(
         address _target
         ) public 
@@ -201,7 +201,7 @@ function isMaster(
 True or False 
 
 ### VIP181 Token Id   
-```
+```solidity
 function ownerToId(
         address _owner
         ) public 
@@ -214,7 +214,7 @@ function ownerToId(
 - `uint256` token id  
 
 ### Token auction info  
-```
+```solidity
 function getMetadata(
         uint256 _tokenId
         ) external 
@@ -240,7 +240,7 @@ function getMetadata(
 - `uint64` update time
 
 ### Authority master node info  
-```
+```solidity
 function getMaster(
         address _target
         ) public 

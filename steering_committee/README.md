@@ -6,7 +6,7 @@
 ## APIs
 ### newProposal
 创建议题
-```
+```solidity
 function newProposal(
         string memory _title,
         proposalCheckType _checkType,
@@ -38,7 +38,7 @@ function newProposal(
 
 ### cast
 投票  
-```
+```solidity
 function cast(
         uint256 _proposalId, 
         uint16 _options,
@@ -54,7 +54,7 @@ function cast(
 
 ### cancelProposal  
 取消议题  
-```
+```solidity
 function cancelProposal(uint256 _proposalId)
         public
         needProposalExist(_proposalId)
@@ -74,7 +74,7 @@ function cancelProposal(uint256 _proposalId)
 
 ### getBasicInfo  
 获取议题基本信息 
-```
+```solidity
 function getBasicInfo(uint256 _proposalId) 
         public 
         view
@@ -103,7 +103,7 @@ function getBasicInfo(uint256 _proposalId)
 
 ### getCondition  
 获取议题限制信息  
-```
+```solidity
 function getCondition(uint256 _proposalId)
         public
         view
@@ -124,9 +124,11 @@ function getCondition(uint256 _proposalId)
 
 ### accessProposal  
 检查目标地址是否有权限投票  
-```
-function accessProposal(uint256 _proposalId, address _target)  
-      public
+```solidity
+function accessProposal(
+        uint256 _proposalId, 
+        address _target
+        )public
       view
       returns (bool isAccess)
 ```
@@ -138,8 +140,11 @@ function accessProposal(uint256 _proposalId, address _target)
  
 ### getVoterOptions  
 获取已投票选项值
-```
-function getVoterOptions(uint256 _proposalId, address _voter)              public
+```solidity
+function getVoterOptions(
+        uint256 _proposalId, 
+        address _voter
+        )public
         view
         returns(uint16 option)
 ```
@@ -151,9 +156,10 @@ function getVoterOptions(uint256 _proposalId, address _voter)              publi
 
 ### getTally  
 返回投票结果  
-```
-function getTally(uint256 _proposalId)
-        public
+```solidity
+function getTally(
+        uint256 _proposalId
+        )public
         view
         returns(uint64[10] memory tally)
 ```  
@@ -164,7 +170,7 @@ function getTally(uint256 _proposalId)
 
 ### status  
 返回当前议题状态
-```
+```solidity
 function status(uint256 _proposalId)
         public
         view
